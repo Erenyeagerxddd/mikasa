@@ -1,5 +1,5 @@
-FROM quay.io/eypzgod/izumi:latest
-RUN git clone https://github.com/sataniceypz/Izumi-v3 /root/bot/
-WORKDIR /root/bot/
+FROM quay.io/lyfe00011/md:beta
+RUN git clone https://github.com/lyfe00011/levanter.git /root/LyFE/
+WORKDIR /root/LyFE/
 RUN yarn install
 CMD ["npm", "start"]
