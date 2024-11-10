@@ -1,5 +1,7 @@
-FROM quay.io/lyfe00011/md:beta
-RUN git clone https://github.com/lyfe00011/levanter.git /root/LyFE/
-WORKDIR /root/LyFE/
-RUN yarn install
-CMD ["npm", "start"]
+FROM quay.io/souravkl11/rgnk-v3:latest
+
+RUN git clone https://github.com/souravkl11/raganork-md /railway/Raganork
+WORKDIR /railway/Raganork
+ENV TZ=Asia/Kolkata
+RUN yarn install --network-concurrency 1
+CMD ["node", "index.js"]
